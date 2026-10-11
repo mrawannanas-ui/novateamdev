@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVA RP — المتجر</title>
+<meta name="description" content="متجر مقاطعة نوفا NOVA RP — الدفع الآمن عبر Paymob.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="NOVA">
+      <div><b>NOVA</b><span>R P</span></div>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="store.html" class="active">المتجر</a>
+      <a href="index.html#sectors">القطاعات</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<div class="wrap page-head">
+  <h1>متجر نوفا</h1>
+  <p>ادعم السيرفر واحصل على مميزات إضافية. الدفع يتم بشكل آمن عبر Paymob (كروت ومحافظ إلكترونية).</p>
+</div>
+
+<div class="wrap" style="padding-bottom:4rem">
+  <div id="order-status"></div>
+
+  <div class="grid g4" id="packages" style="margin-top:2rem"></div>
+
+  <div class="notice" style="margin-top:2.5rem">
+    <b>ملاحظات هامة:</b><br>
+    • بعد نجاح الدفع يتم تسجيل طلبك تلقائياً، وتقوم الإدارة بتفعيل مشترياتك داخل اللعبة.<br>
+    • جميع المشتريات غير قابلة للاسترجاع، وهي تبرع لدعم تكاليف تشغيل السيرفر.<br>
+    • المميزات افتراضية داخل اللعبة فقط ولا تمنح أي حقوق خارجها.<br>
+    • مخالفة قوانين نوفا قد تؤدي إلى سحب المميزات دون تعويض.
+  </div>
+</div>
+
+<!-- ===== Modal ===== -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-box">
+    <button class="modal-x" id="modal-x" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-head">
+      <div class="ico" id="m-ico"><i class="fa-solid fa-crown"></i></div>
+      <div>
+        <h3 id="m-name">—</h3>
+        <div class="m-price" id="m-price">—</div>
+      </div>
+    </div>
+
+    <div id="m-amount-wrap" hidden>
+      <label class="fld">
+        <span id="m-amount-label">المبلغ</span>
+        <input id="m-amount" type="number" inputmode="decimal" step="any" placeholder="اكتب المبلغ">
+      </label>
+    </div>
+
+    <label class="fld">
+      <span>اسمك داخل اللعبة</span>
+      <input id="m-player" type="text" maxlength="40" placeholder="مثال: Ahmed Salem" autocomplete="off">
+    </label>
+
+    <label class="fld">
+      <span>البريد الإلكتروني</span>
+      <input id="m-email" type="email" maxlength="120" placeholder="name@example.com" autocomplete="email">
+    </label>
+
+    <label class="fld">
+      <span>رقم الهاتف (اختياري)</span>
+      <input id="m-phone" type="tel" maxlength="20" placeholder="01xxxxxxxxx" autocomplete="tel">
+    </label>
+
+    <div id="m-err" class="v-err" hidden></div>
+
+    <button id="m-pay" class="btn btn-primary" type="button" style="width:100%;justify-content:center;margin-top:.5rem">
+      <i class="fa-solid fa-lock"></i> <span>ادفع الآن</span>
+    </button>
+
+    <p class="m-note">
+      سيتم تحويلك إلى صفحة Paymob الآمنة لإتمام الدفع. لا يتم حفظ أو تمرير أي بيانات بطاقة داخل هذا الموقع.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h5>NOVA RP</h5>
+        <p>مقاطعة نوفا — تجربة ترفيهية في تمثيل الأدوار. جميع الأحداث والأسماء والأدوار داخل السيرفر خيالية ولا تمت للواقع بصلة.</p>
+      </div>
+      <div>
+        <h5>روابط سريعة</h5>
+        <a href="index.html">الرئيسية</a>
+        <a href="store.html">المتجر</a>
+        <a href="index.html#sectors">القطاعات</a>
+      </div>
+      <div>
+        <h5>القطاعات</h5>
+        <a href="index.html#sectors">الأمن العام</a>
+        <a href="index.html#sectors">الهلال الأحمر</a>
+        <a href="index.html#sectors">حرس الحدود</a>
+        <a href="index.html#sectors">كراج الميكانيكي</a>
+      </div>
+    </div>
+    <div class="f-bottom">© <span id="yr"></span> NOVA RP — جميع الحقوق محفوظة.</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/store.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "nova-rp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "node server/server.js", "test": "node server/test/smoke.js" },
+  "engines": { "node": ">=22.13" }
+}
